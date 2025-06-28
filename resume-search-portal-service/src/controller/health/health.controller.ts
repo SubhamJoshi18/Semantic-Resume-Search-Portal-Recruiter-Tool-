@@ -6,20 +6,15 @@ import {
 } from "../../services/health.service";
 import { sendGenericRespone } from "../../libs/common.response.libs";
 
+const healthInstance = getHealthServiceInstance();
 class HealthController implements HealthControllerAbstract {
-  private healthInstance: HealthService;
-
-  constructor() {
-    this.healthInstance = getHealthServiceInstance();
-  }
-
   public async getHealthStatus(
     req: Request,
     res: Response,
     next: NextFunction
   ): Promise<void> {
     try {
-      const apiResponse = await this.healthInstance.getHealth();
+      const apiResponse = await healthInstance.getHealth();
       const { data, message } = apiResponse;
       sendGenericRespone(res, data, message);
     } catch (err: any) {
