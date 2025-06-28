@@ -1,0 +1,13 @@
+{
+  "pdf_path": "/Users/uba/Documents/Semantic-Resume-Search-Portal/resume-search-portal-service/uploads/resume-1751113558117.pdf",
+  "sections": {
+    "summary": "",
+    "experience": "",
+    "projects": "PROJECTS\nDAILY MOTIVATION APP\ne Aweb-based application built with Node.js, Express, MongoDB to help users stay\nmotivated by tracking their daily progress and goals. It features user authentication\nwith JWT, habit tracking, mood analysis, and personalized motivational quotes. The\napp includes secure API endpoints, real-time data storage with MongoDB, and\nreminder notifications to enhance productivity and well-being.\ne Link: https://github.com/Subodh2084/Daily-motivation-tracker-app.git\nAP| DEPLOYMENT\ne A lightweight web application built with Node.js and Express for managing\nbooks. It allows users to add, update, delete, and view books efficiently. Data\nis stored in MongoDB, and JWT authentication can be integrated for secure\naccess.\ne Link: https://github.com/Subodh2084/Api-deployment.git\n",
+    "skills": "SKILLS\ne Programming Languages:\n- JavaScript, TypeScript\n@ Frameworks:\n- Express.js, Node.js, Next.js\n@ Database:\n- MongoDB, MySQL, PostgreSQL,\ne@ Version Control and CI/CD and Project Management Tools :\n- | Git/Github , Jenkins , Github Actions, Jira\n",
+    "education": "EDUCATION\nBachelors in Computer Science and Information Technology 2023-Present\n(B. Sc.CSIT)\nTribhuvan University, Kathmandu\n+2 in Science (Physics and Maths) 2019-2021\nD.A.V, Lalitpur\n--- Page 2 ---\n",
+    "certifications": "",
+    "languages": "",
+    "others": "--- Page 1 ---\nSUBODH NEPAL\ne Kathmandu, Nepal * & +977 9869629030 * M subodhnepal10@ gmail.com\ne Mwww.linkedin.com/in/subodh-nepal-650682284\nI am a skilled web developer with expertise in Node.js specializing in building scalable\nand secure web applications. With a strong passion for problem-solving and clean coding\npractices, I focus on developing efficient backend systems and seamless user experiences.\nAlways eager to learn and adapt, I strive to create innovative solutions that enhance\nfunctionality and user engagement.\n"
+  }
+}
