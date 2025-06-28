@@ -9,4 +9,8 @@ const getEnvValue = (key: string): string | undefined => {
   return isEnvExists ? process.env[key] : undefined;
 };
 
-export { getEnvValue };
+const getObjectValue = (obj: object | any, key: string) => {
+  return Object.prototype.hasOwnProperty.call(obj, key) ? obj[key] : null;
+};
+
+export { getEnvValue, getObjectValue };
