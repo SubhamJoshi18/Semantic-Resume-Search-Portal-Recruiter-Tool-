@@ -16,6 +16,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "amqplib": "^0.10.8",
     "express": "^5.1.0",
     "http-status-codes": "^2.3.0",
     "multer": "^2.0.1",
