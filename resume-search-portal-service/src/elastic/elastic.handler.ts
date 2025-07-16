@@ -20,10 +20,9 @@ async function createIndexes(client: Client) {
     }
 
     await client.indices.create({
-      index: "professor_advisor_index",
+      index: elasticIndexes["cv_extraction_index"] as string,
       body: {
         mappings: putMappingOnElastic(client),
-        settings: putSettingOnIndex(client),
       },
     });
 
@@ -32,6 +31,7 @@ async function createIndexes(client: Client) {
         elasticIndexes["cv_extraction_index"] as string
       } Has been Created Successfully`
     );
+    return;
   } catch (err: any) {
     resumeLogger.error(
       `Error Creating the Indexes, Please Check the Connection`

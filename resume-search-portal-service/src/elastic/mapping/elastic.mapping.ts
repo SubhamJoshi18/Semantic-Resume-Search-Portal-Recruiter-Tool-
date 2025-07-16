@@ -5,14 +5,14 @@ import { elasticIndexes } from "../../constant/elastic.constant";
 function putMappingOnElastic(client: Client) {
   return {
     properties: {
-      summary: searchProperty,
-      experience: searchProperty,
-      projects: searchProperty,
-      skills: searchProperty,
-      education: searchProperty,
-      certifications: searchProperty,
-      languages: searchProperty,
-      others: searchProperty,
+      summary: { type: "text" },
+      experience: { type: "text" },
+      projects: { type: "text" },
+      skills: { type: "text" },
+      education: { type: "text" },
+      certifications: { type: "text" },
+      languages: { type: "text" },
+      others: { type: "text" },
     } as any,
   };
 }
