@@ -5,9 +5,11 @@ import {
 } from "../../constant/queue.constant";
 import { resumeLogger } from "../../libs/common.logger.libs";
 import elasticHandler from "../handlers/elastic.handler";
+import getElasticClient from "../../elastic/elastic.handler";
 
 async function consumeElasticPayload(channel: amqp.Channel) {
   try {
+    const elasticClient = await getElasticClient();
     const { name, exchange } = resumeElasticConfig;
     await channel.assertExchange(exchange, directExchange, { durable: true });
     await channel.assertQueue(name, { durable: true });
@@ -23,7 +25,7 @@ async function consumeElasticPayload(channel: amqp.Channel) {
               parseContent
             )}`
           );
-          await elasticHandler(parseContent);
+          await elasticHandler(parseContent, elasticClient);
         }
       } catch (err: any) {
         resumeLogger.error(`Error Consuming the Elastic Payload, Error ${err}`);
@@ -31,6 +33,8 @@ async function consumeElasticPayload(channel: amqp.Channel) {
         if (channel && message) {
           channel.ack(message);
         }
+        resumeLogger.info(`Closing the Elastic Search Client`);
+        await elasticClient.close();
       }
     });
   } catch (err: any) {
